@@ -24,7 +24,6 @@ def new_album(request):
         q = Album(title=request.POST['title'], artist=request.POST['artist'], created_at=timezone.now())
         q.save()
         return HttpResponseRedirect('/')
-    # if a GET (or any other method) we'll create a blank form from add_album.html
     else:
         return render(request, 'add_album.html')
     
