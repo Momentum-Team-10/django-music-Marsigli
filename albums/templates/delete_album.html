@@ -1,0 +1,8 @@
+<p>Are you sure you want to delete  {{album.title}}?</p>
+
+<form method="POST">
+    <!-- server side security token cross site request forgery -->
+    {% csrf_token %} 
+    <input type="hidden" name="id" value='{{album.id}}'/>
+    <input type="submit" name="aButton" value="Delete" />
+</form>

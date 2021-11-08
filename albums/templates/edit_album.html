@@ -1,0 +1,12 @@
+<p>Are you sure you want to edit  {{album.title}}?</p>
+
+<form method="POST">
+    <!-- server side security token cross site request forgery -->
+    {% csrf_token %} 
+    Title: <input type="text" name="title" value='{{album.title}}' />
+    <br />
+    Artist: <input type="text" name="artist" value='{{album.artist}}' />
+    <br />
+    <input type="hidden" name="id" value='{{album.id}}'/>
+    <input type="submit" name="aButton" value="Edit" />
+</form>

@@ -1,0 +1,9 @@
+<form method="POST">
+    <!-- server side security token cross site request forgery -->
+    {% csrf_token %} 
+    Title: <input type="text" name="title" />
+    <br />
+    Artist: <input type="text" name="artist" />
+    <br />
+    <input type="submit" name="aButton" value="Add Album" />
+</form>
